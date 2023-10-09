@@ -9,8 +9,7 @@ const Footer = () => {
     <div className='footer'>
       <img src={logo} alt="EverUse logo in white, curvy text" className='footer__logo' /> 
       <p className='footer__text'>© 2023 EverUse Upcycled Products</p>
-      <a href='https://www.instagram.com/everuseproducts/?hl=en'><img className='footer__instagram' src={instagram} alt='instagram '/></a>
-      
+      <a href='https://www.instagram.com/everuseproducts/?hl=en'><img className='footer__instagram' src={instagram} alt='instagram '/></a> 
     </div>
   )
 }
