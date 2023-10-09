@@ -83,7 +83,7 @@ describe('test userflows', () => {
     cy.get('.bag__items').children().should('have.length', 1)
     cy.checkBagItem('Beer Koozie', 'S', 'Orange Plaid', 25, 2)
     cy.get('.item__delete').click()
-    cy.get('h3').contains('Your shopping bag is empty')
+    cy.get('h2').contains('Your shopping bag is empty')
   })
 
   it('should be able to add same and different item to the cart', () => {

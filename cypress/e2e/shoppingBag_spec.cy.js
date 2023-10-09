@@ -11,12 +11,12 @@ describe("Shopping Bag Page", () => {
   });
 
   it("Should show shopping bag details", () => {
-    cy.get("h2").contains("Shopping Bag");
+    cy.get("h1").contains("Shopping Bag");
     cy.get(".bag__items").children().should("have.length", 3);
     cy.get(".bag__items")
       .children()
       .first()
-      .get("h4")
+      .get("p")
       .contains("Bracelet")
       .get("p")
       .contains("Size: M")
@@ -31,7 +31,7 @@ describe("Shopping Bag Page", () => {
     cy.get(".bag__items")
       .children()
       .last()
-      .get("h4")
+      .get("p")
       .contains("Dog Leash")
       .get("p")
       .contains("Size: Onesize")
@@ -43,7 +43,7 @@ describe("Shopping Bag Page", () => {
       .contains("1")
       .get(".item__price")
       .contains("$30.00");
-    cy.get("h3").contains("Request Summary");
+    cy.get("h2").contains("Request Summary");
     cy.get("p").contains("Order Subtotal:");
     cy.get(".bag__total").contains("$130.00");
     cy.get(".bag__button").contains("Continue to Request");
@@ -111,7 +111,7 @@ describe("Shopping Bag Page", () => {
       .contains("$60.00");
     cy.get(".item__delete")
       .click()
-      .get("h3")
+      .get("h2")
       .contains("Your shopping bag is empty.")
       .get(".bag__button")
       .contains("Continue Shopping")
