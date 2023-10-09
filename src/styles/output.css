@@ -120,7 +120,7 @@ body {
   padding: 0;
   width: 3.5rem;
   height: 0.75rem;
-  background-color: #867C77;
+  background-color: #5d5451;
   color: #FFFFFF;
   padding: 1rem;
   border: none;
@@ -264,6 +264,7 @@ body {
   background: #F4F4F4;
 }
 .details .details__header {
+  background-color: #507c8f;
   background-image: url("../images/detail-horizontal-bg.jpg");
   background-size: cover;
   height: 15rem;
@@ -374,7 +375,7 @@ body {
   justify-content: space-evenly;
 }
 .details-order-form .details-order-form__selection-pair .details-order-form__faded {
-  color: #867C77;
+  color: #5d5451;
   opacity: 0.8;
 }
 .details-order-form .details-order-form__selection-pair select {
@@ -398,7 +399,7 @@ body {
 }
 .details-order-form .details-order-form__btn-container .details-order-form__submit-btn,
 .details-order-form .details-order-form__btn-container .details-order-form__faded-btn {
-  background-color: #867C77;
+  background-color: #5d5451;
   color: #FFFFFF;
   padding: 1rem;
   border: none;
@@ -587,7 +588,7 @@ body {
   margin: 0 5%;
 }
 .bag .bag__button {
-  background-color: #867C77;
+  background-color: #5d5451;
   color: #FFFFFF;
   padding: 1rem;
   border: none;
@@ -740,7 +741,7 @@ body {
 }
 .size-options-container input:checked + label {
   border: none;
-  background-color: #867C77;
+  background-color: #5d5451;
   color: white;
 }
 .size-options-container input {
@@ -864,13 +865,13 @@ body {
   margin-top: 2rem;
   padding: 8px 10px;
   width: 6rem;
-  background-color: #867C77;
+  background-color: #5d5451;
   color: #FFFFFF;
   padding: 1rem;
   border: none;
   border-radius: 30px;
   text-decoration: none;
-  background-color: #867C77;
+  background-color: #5d5451;
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -928,7 +929,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-size: 10px;
+  font-size: 11px;
   color: #FFFFFF;
   margin: 0;
 }

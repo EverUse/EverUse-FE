@@ -10,6 +10,7 @@
   overflow: auto;
   background: v.$primary-background-color;
   .details__header {
+    background-color: v.$secondary-background-color;
     background-image: url('../images/detail-horizontal-bg.jpg');
     background-size: cover;
     height: 15rem;
