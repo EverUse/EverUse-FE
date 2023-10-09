@@ -8,22 +8,13 @@ import { Pagination, Mousewheel, Keyboard, Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { camelToPascalCase } from '../helperFunctions';
 
-const Products = ({itemsForDisplay, setOpen, errorMessage}) => {
+const Products = ({itemsForDisplay, setOpen, errorMessage, altText}) => {
   
-  const cards = itemsForDisplay.map(item => {
-    const altText = {
-      bracelet: 'three woven bracelets in varying shades of blue, orange, red, and green',
-      keychain: 'a tray holding a row of woven keychains in various brightcolors',
-      beerKoozie: 'a colorful beer koozie with handle held by a smiling woman',
-      basket: 'two colorful woven baskets with lids',
-      dogLeash: 'a blue, purple, and pink sturdy rope dog leash'
-    }
-    
+  const cards = itemsForDisplay.map(item => {    
     return (
         <SwiperSlide key={item.id} >
           <Link to={`/products/${item.id}`}>
             <div className="card">
-              {console.log(item.name)}
               <img src={item.image} alt={altText[item.name]} className="card__image" />
               <div className="card__info">
                 <h3 className="card__name">{camelToPascalCase(item.name)}</h3>

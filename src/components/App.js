@@ -85,6 +85,14 @@ useEffect(() => {
     setItemsForDisplay(displayProducts);
   }, [items]);
 
+  const altText = {
+    bracelet: 'three woven bracelets in varying shades of blue, orange, red, and green',
+    keychain: 'a tray holding a row of woven keychains in various brightcolors',
+    beerKoozie: 'a colorful beer koozie with handle held by a smiling woman',
+    basket: 'two colorful woven baskets with lids',
+    dogLeash: 'a blue, purple, and pink sturdy rope dog leash'
+  }
+
   return (
     <div className="app">
       
@@ -96,6 +104,7 @@ useEffect(() => {
               element={<Home 
                 itemsForDisplay={itemsForDisplay} 
                 setItems={setItems}
+                altText={altText}
               />} 
             />
             <Route 
@@ -105,6 +114,7 @@ useEffect(() => {
                 totalPrice={totalPrice} 
                 removeItemFromBag={removeItemFromBag} 
                 updateQuantity={updateQuantity} 
+                altText={altText}
               />} 
             />
             <Route 
@@ -123,6 +133,7 @@ useEffect(() => {
                 shoppingBag={shoppingBag} 
                 addToShoppingBag={addToShoppingBag} 
                 itemsForDisplay={itemsForDisplay} 
+                altText={altText}
               />}
             />
             <Route

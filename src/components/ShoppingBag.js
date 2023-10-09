@@ -5,16 +5,16 @@ import { HashLink } from 'react-router-hash-link';
 import { camelToPascalCase } from '../helperFunctions';
 import Nav from './Nav/Nav';
 
-const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantity }) => {
+const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantity, altText }) => {
   
   const items = shoppingBag.map(item => {
     return (
     <article key={item.id} className='item'>
       <div className='item__img-container'>
-        <img src={item.image} alt={item.type} className='item__img' />
+        <img src={item.image} alt={altText[item.type]} className='item__img' />
       </div>
       <span className='item__info'>
-        <h4>{camelToPascalCase(item.type)}</h4>
+        <h3>{camelToPascalCase(item.type)}</h3>
         <div className='item__details'>
           <div className='item__specs'>
             <p className='item__spec'>Size: {camelToPascalCase(item.size)}</p>
@@ -37,14 +37,14 @@ const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantit
     <>
     <Nav />
     <div className='bag'>
-      <h2>Shopping Bag</h2>
+      <h1>Shopping Bag</h1>
       {shoppingBag.length ?
       <div className='bag__contents'>
         <section className='bag__items'>
           {items}
         </section>
         <section className='bag__summary'>
-          <h3 className='bag__summary-header'>Request Summary</h3>
+          <h2 className='bag__summary-header'>Request Summary</h2>
           <div className='bag__subtotal'>
             <p>Order Subtotal:</p>
             <p className='bag__total'>${totalPrice}</p>
@@ -54,7 +54,7 @@ const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantit
       </div>
       :
       <div className='bag__empty'>
-        <h3>Your shopping bag is empty.</h3>
+        <h2>Your shopping bag is empty.</h2>
         <HashLink smooth to='/#products' className='bag__button'>Continue Shopping</HashLink>
       </div>
       }

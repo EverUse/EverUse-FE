@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "development") {
   loadErrorMessages();
 }
 
-const ProductDetail = ({addToShoppingBag, shoppingBag, updateQuantity}) => {
+const ProductDetail = ({addToShoppingBag, shoppingBag, updateQuantity, altText}) => {
   const [product, setProduct] = useState({});
   const [errorMessage, setErrorMessage] = useState('We could not find the product you are looking for.');
   const productID = useParams().productID;
@@ -43,13 +43,13 @@ const ProductDetail = ({addToShoppingBag, shoppingBag, updateQuantity}) => {
       {!loading && <div className="details">
         <Nav />     
         <div className="details__header">
-          <h2 className="details__header-text">Products handmade from upcycled climbing ropes in an effort to reduce waste</h2>
+          <h1 className="details__header-text">Products handmade from upcycled climbing ropes in an effort to reduce waste</h1>
         </div>
         {error || !data.product.length ? <p className="details__error">{errorMessage}</p> :
         <div className="details__info">
           <div className="details__info-product">
             <div className="details__info-img-container">
-              <img className="details__info-img" alt={product.name} src={product.image}/>
+              <img className="details__info-img" alt={altText[product.name]} src={product.image}/>
             </div>
             <DescriptionText description={product.description} />
           </div>
