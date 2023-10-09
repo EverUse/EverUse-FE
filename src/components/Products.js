@@ -11,11 +11,20 @@ import { camelToPascalCase } from '../helperFunctions';
 const Products = ({itemsForDisplay, setOpen, errorMessage}) => {
   
   const cards = itemsForDisplay.map(item => {
+    const altText = {
+      bracelet: 'three woven bracelets in varying shades of blue, orange, red, and green',
+      keychain: 'a tray holding a row of woven keychains in various brightcolors',
+      beerKoozie: 'a colorful beer koozie with handle held by a smiling woman',
+      basket: 'two colorful woven baskets with lids',
+      dogLeash: 'a blue, purple, and pink sturdy rope dog leash'
+    }
+    
     return (
         <SwiperSlide key={item.id} >
           <Link to={`/products/${item.id}`}>
             <div className="card">
-              <img src={item.image} alt={item.name} className="card__image" />
+              {console.log(item.name)}
+              <img src={item.image} alt={altText[item.name]} className="card__image" />
               <div className="card__info">
                 <h2 className="card__name">{camelToPascalCase(item.name)}</h2>
                 <p className="card__price">${item.price}</p>
@@ -27,7 +36,7 @@ const Products = ({itemsForDisplay, setOpen, errorMessage}) => {
   });
 
   return (
-    <div id="products" className="products" onClick={() => {setOpen(false)}}>
+    <section id="products" className="products" onClick={() => {setOpen(false)}}>
       <h1 className="products__header">Products</h1>
       {errorMessage && <p className="products__error">{errorMessage}</p>}
       <div className="products__container">
@@ -54,7 +63,7 @@ const Products = ({itemsForDisplay, setOpen, errorMessage}) => {
           {cards}
         </Swiper>
       </div>
-    </div>
+    </section>
   )
 };
 

@@ -33,7 +33,7 @@ const Nav = ({open, setOpen}) => {
         <Link to="/">
           <img
             src={require("../../images/logo-white.png")}
-            alt="logo"
+            alt="EverUse logo in white, curvy letters"
             className="nav__logo"
           />
         </Link>
