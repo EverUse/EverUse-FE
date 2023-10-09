@@ -38,7 +38,7 @@ const ProductDetail = ({addToShoppingBag, shoppingBag, updateQuantity}) => {
   },[data, error]);
  
   return (
-    <>
+    <main>
       {loading && <LoadSpinner />}
       {!loading && <div className="details">
         <Nav />     
@@ -56,7 +56,7 @@ const ProductDetail = ({addToShoppingBag, shoppingBag, updateQuantity}) => {
           <ProductDetailOrderForm product={product} updateQuantity={updateQuantity} shoppingBag={shoppingBag} addToShoppingBag={addToShoppingBag}/>
         </div>}
       </div>}
-    </>
+    </main>
   )
 }
 
