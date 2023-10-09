@@ -124,7 +124,7 @@ body {
   padding: 1rem;
   border: none;
   border-radius: 30px;
-  background-color: #58889C;
+  background-color: #507c8f;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -176,7 +176,7 @@ body {
 .nav__header {
   display: flex;
   justify-content: space-between;
-  background-color: #58889C;
+  background-color: #507c8f;
   position: relative;
   z-index: 3;
   width: 100%;
@@ -214,7 +214,7 @@ body {
   height: 100vh;
   margin: 0;
   list-style: none;
-  background-color: #58889C;
+  background-color: #507c8f;
   width: 100px;
   position: fixed;
   padding: 2.5rem;
@@ -237,7 +237,7 @@ body {
   cursor: pointer;
   font-size: 1.2rem;
   text-decoration: none;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -772,7 +772,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
   min-height: 100vh;
-  background-color: #58889C;
+  background-color: #507c8f;
 }
 .about .about__header {
   display: flex;
@@ -914,7 +914,7 @@ body {
 
 .footer {
   height: 15vh;
-  background-color: #58889C;
+  background-color: #507c8f;
   display: flex;
   flex-direction: column;
   align-items: center;
