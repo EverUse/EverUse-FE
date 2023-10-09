@@ -14,7 +14,7 @@ const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantit
         <img src={item.image} alt={altText[item.type]} className='item__img' />
       </div>
       <span className='item__info'>
-        <h3>{camelToPascalCase(item.type)}</h3>
+        <p className='item__name'>{camelToPascalCase(item.type)}</p>
         <div className='item__details'>
           <div className='item__specs'>
             <p className='item__spec'>Size: {camelToPascalCase(item.size)}</p>
@@ -34,7 +34,7 @@ const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantit
   });
 
   return (
-    <>
+    <main>
     <Nav />
     <div className='bag'>
       <h1>Shopping Bag</h1>
@@ -59,7 +59,7 @@ const ShoppingBag = ({ shoppingBag, totalPrice, removeItemFromBag, updateQuantit
       </div>
       }
     </div>
-    </>
+    </main>
   )
 };
 

@@ -546,7 +546,6 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
-.bag h3,
 .bag p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -621,7 +620,7 @@ body {
   aspect-ratio: 4/3;
   max-width: 100%;
 }
-.item h4 {
+.item .item__name {
   margin: 0;
 }
 .item .item__info {

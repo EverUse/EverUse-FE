@@ -15,7 +15,6 @@
     @include m.header-font;
   }
 
-  h3,
   p {
     @include m.body-font;
   }
@@ -88,7 +87,7 @@
     max-width: 100%;
   }
 
-  h4 {
+  .item__name {
     margin: 0;
   }
 
