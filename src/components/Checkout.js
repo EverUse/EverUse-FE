@@ -34,18 +34,18 @@ const Checkout = ({
   }, 0);
 
   return (
-    <>
+    <main>
       <Nav />
       <div className="checkout">
         <div className="checkout__header">
-          <h3>Order Request</h3>
+          <h1>Order Request</h1>
         </div>
         <p>
           Requests will be sent to EverUse and followed up within 5 business
           days. Payment methods will be discussed over email.
         </p>
         <div className="checkout__container">
-          <div className="checkout__summary">
+          <section className="checkout__summary">
             <h3>Request Summary</h3>
             <b>{numberOfItems} items</b>
             {items}
@@ -53,7 +53,7 @@ const Checkout = ({
               <p>Estimated Total</p>
               <p>${totalPrice}</p>
             </div>
-          </div>
+          </section>
           <Form
             shoppingBag={shoppingBag}
             totalPrice={totalPrice}
@@ -62,7 +62,7 @@ const Checkout = ({
           />
         </div>
       </div>
-    </>
+    </main>
   );
 };
 
