@@ -9,9 +9,9 @@ describe('checkout', () => {
     cy.visit('http://localhost:3000/checkout')
   })
   it('All elements should be on the page and contain the correct values', () => {
-    cy.get('h3').first().contains('Order Request')
+    cy.get('h1').first().contains('Order Request')
       .get('p').first().contains('Requests will be sent to EverUse and followed up within 5 business days. Payment methods will be discussed over email.')
-      .get('h3').eq(1).contains('Request Summary')
+      .get('h3').contains('Request Summary')
       .get('b').first().contains('6 items')
       .get('.checkout__item').should('have.length', '3')
       .get('.checkout__item').first().contains('b', '2x Bracelet')
